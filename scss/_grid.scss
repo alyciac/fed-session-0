@@ -1,0 +1,8 @@
+.grid{
+    display: flex;
+    flex-direction: row; 
+
+    .section--second &{
+        flex-wrap: wrap; 
+    }
+}

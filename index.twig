@@ -1,34 +1,27 @@
 {% extends "templates/base.twig" %}
 
 {% block body %}
+  
   {# Embed template #}
-  {% embed "templates/section.twig" with {
-    title: "Unicorns"
+  {% include "templates/section.twig" with {
+    modifier_class: "section--first",
+    title: spotlight_section.title, 
+    url: spotlight_section.see_all.url, 
+    link_text: spotlight_section.see_all.link_text, 
+    big_card: true, 
+    items: spotlight_section.items, 
+    footer: false
   } %}
-    
-    {% block section_block %}
-      Hendrerit risus nam mus.
-    {% endblock section_block %}
 
-  {% endembed  %}
+  {% include "templates/section.twig" with {
+    modifier_class: "section--second",
+    title: recent_section.title, 
+    url: recent_section.see_all.url, 
+    intro: recent_section.intro, 
+    link_text: recent_section.see_all.link_text, 
+    big_card: false, 
+    items: recent_section.items, 
+    footer: true
+  } %}
 
-  {# Access data from data/data.json using dot notation #}
-  {{spotlight_section.title}}
-  {{spotlight_section.see_all.link_text}}
-
-  {# Twig for Loop #}
-  {% for item in spotlight_section.items %}
-    
-    {# Get the index inside a loop #}
-    <p>The index of the loop {{loop.index}}</p>
-
-    {# Boolean to check if current item is the first #}
-    <p>Boolean first item {{loop.first}}</p>
-
-    {# If statement #}
-    {% if loop.first %}
-      I am a Unicorn
-    {% endif %}
-    
-  {% endfor %}
 {% endblock body %}

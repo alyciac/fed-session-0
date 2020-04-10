@@ -1,0 +1,11 @@
+<div class="grid">
+    {% for item in items %}
+        {% include "templates/card.twig" with {
+            big_card: big_card, 
+            card_category: item.category, 
+            card_image: item.image, 
+            card_title: item.title, 
+            card_authors: item.authors, 
+         } %}
+    {% endfor  %}  
+</div>

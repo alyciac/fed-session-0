@@ -1,0 +1,24 @@
+{% if loop.first and big_card == true %}
+<article class="card card--big">
+{% else %}
+<article class="card">
+    <div class="category">
+        <p class="category_link-{{card_category}}">{{card_category}}</p>
+        <hr>
+    </div>
+{% endif %}
+    {% if card_image %}
+        <img class="card__image" src="{{card_image}}"class="card__image" alt=" ">
+    {% endif %}
+    <header class="card__header">
+        <h2 class="card__title">{{card_title}}
+        <span class="material-icons">call_made</span>
+        </h2>
+    <p class="card__author">By {{ card_authors|map(p => "#{p}" )|join(', ')}}</p>
+    </header>
+    <div class="card__content">
+        <p>
+        Pony app rainbows social wereunicorn social pony surprise pigeon. Pop pony kittens wereunicorn surprise puppy surprise. Unicorn kittens wereunicorn pigeon pop pop unicorn pony surprise.
+        </p>
+    </div>  
+</article>
