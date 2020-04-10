@@ -12,7 +12,9 @@
     {% endif %}
     <header class="card__header">
         <h2 class="card__title">{{card_title}}
-        <span class="material-icons">call_made</span>
+        {% if big_card == false %}
+            <span class="material-icons">call_made</span>
+        {% endif %}
         </h2>
     <p class="card__author">By {{ card_authors|map(p => "#{p}" )|join(', ')}}</p>
     </header>
