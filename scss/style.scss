@@ -1,7 +1,9 @@
 @import "section";
 @import 'grid'; 
 @import 'card'; 
+@import 'header'; 
 
 body {
   background-color: white;
+  margin: 0; 
 }

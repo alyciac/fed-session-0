@@ -1,21 +1,24 @@
 <section class="section {{modifier_class}}">
-   {% include "templates/header.twig" with {
-    title: title, 
-    url: url, 
-    link_text: link_text, 
-    intro: intro
-  } %}
+  <div class="section__constrain">
+  
+    {% include "templates/header.twig" with {
+      title: title, 
+      url: url, 
+      link_text: link_text, 
+      intro: intro
+    } %}
 
-  {% include "templates/grid.twig" with {  
-    big_card: big_card, 
-    items: items
-  } %}
+    {% include "templates/grid.twig" with {  
+      big_card: big_card, 
+      items: items
+    } %}
 
-  {% if footer == true %}
-    {% include "templates/footer.twig" %}
-  {% endif %}
+    {% if footer == true %}
+      {% include "templates/footer.twig" %}
+    {% endif %}
 
-  {% block section_block %}
-  {% endblock section_block %}
- 
+    {% block section_block %}
+    {% endblock section_block %}
+
+  </div>
 </section>

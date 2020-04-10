@@ -7,7 +7,7 @@
         <hr>
     </div>
 {% endif %}
-    {% if card_image %}
+    {% if card_image and big_card == true %}
         <img class="card__image" src="{{card_image}}"class="card__image" alt=" ">
     {% endif %}
     <header class="card__header">
