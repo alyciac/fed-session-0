@@ -2,8 +2,10 @@
 <article class="card card--big">
 {% else %}
 <article class="card">
-    <div class="category">
-        <p class="category category-{{card_category}}">{{card_category}}</p>
+    <div class="category__wrapper">
+        <div class="category__name">
+            <span class="category category-{{card_category}}">{{card_category}}</span><hr> 
+        </div>
         <hr>
     </div>
 {% endif %}
@@ -16,7 +18,7 @@
             <span class="material-icons">call_made</span>
         {% endif %}
         </h2>
-    <p class="card__author">By {{ card_authors|map(p => "#{p}" )|join(', ')}}</p>
+    <p class="card__author">By {{ card_authors | join(', ')}}</p>
     </header>
     <div class="card__content">
         <p>
