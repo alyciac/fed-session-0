@@ -1,12 +1,31 @@
+{% block grid %}
 <div class="grid">
     {% for item in items %}
-        {% include "templates/card.twig" with {
-            big_card: big_card, 
-            card_category: item.category, 
+        {% if loop.first and big_card == true %}
+            {% include "templates/card.twig" with {
+            mod: 'card--big', 
             card_image: item.image, 
             card_title: item.title, 
             card_authors: item.authors, 
             card_content: item.content
          } %}
+        {% elseif big_card == true %}
+            {% include "templates/card.twig" with {
+                card_category: item.category,  
+                card_image: item.image,
+                card_title: item.title, 
+                card_authors: item.authors, 
+                card_content: item.content
+            } %}
+        {% else %}
+            {% include "templates/card.twig" with {
+                card_category: item.category,  
+                card_title: item.title, 
+                card_authors: item.authors, 
+                card_content: item.content, 
+                card_icon: 'call_made'
+            } %}
+        {% endif %}
     {% endfor  %}  
 </div>
+{% endblock grid %}

@@ -8,17 +8,11 @@
       intro: intro
     } %}
 
-    {% include "templates/grid.twig" with {  
-      big_card: big_card, 
-      items: items
-    } %}
+    {% block grid %}
+    {% endblock grid %}
 
-    {% if footer == true %}
-      {% include "templates/footer.twig" %}
-    {% endif %}
-
-    {% block section_block %}
-    {% endblock section_block %}
+    {% block footer %}
+    {% endblock footer %}
 
   </div>
 </section>

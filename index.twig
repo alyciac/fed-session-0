@@ -3,25 +3,44 @@
 {% block body %}
 
   {# Embed template #}
-  {% include "templates/section.twig" with {
+  {% embed "templates/section.twig" with {
     modifier_class: "section--first",
     title: spotlight_section.title, 
     url: spotlight_section.see_all.url, 
     link_text: spotlight_section.see_all.link_text, 
-    big_card: true, 
-    items: spotlight_section.items, 
-    footer: false
+    big_card: true 
   } %}
+    {% block grid %}
+      {% include "templates/grid.twig" with{
+        items: spotlight_section.items
+      }%}
+    {% endblock grid %}
 
-  {% include "templates/section.twig" with {
+  {% endembed %}
+
+  {% embed "templates/section.twig" with {
     modifier_class: "section--second",
     title: recent_section.title, 
     url: recent_section.see_all.url, 
     intro: recent_section.intro, 
     link_text: recent_section.see_all.link_text, 
-    big_card: false, 
-    items: recent_section.items, 
-    footer: true
+    big_card: false 
   } %}
+
+    {% block grid %}
+      {% include "templates/grid.twig" with{
+        items: recent_section.items
+      }%}
+    {% endblock grid %}
+
+    {% block footer %}
+      {% include "templates/footer.twig" with{
+        button_url: '#tacos', 
+        button_text: 'Subscribe'
+      }%}
+    {% endblock footer %}
+
+  {% endembed %}
+
 
 {% endblock body %}
