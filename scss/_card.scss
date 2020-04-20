@@ -1,5 +1,3 @@
-@import "mixins"; 
-
 $font-color: #393939; 
 $blue: #123C69; 
 $red: #AC3B61; 
@@ -23,7 +21,7 @@ $red: #AC3B61;
 }
 
 .category-unicorns{
-    @include linky-link($blue, $red); 
+    @include linky-link(); 
 }
 
 .category-bears{

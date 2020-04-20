@@ -1,10 +1,10 @@
+@import 'mixins'; 
 @import "section";
 @import 'grid'; 
 @import 'card'; 
 @import 'header'; 
-@import 'mixins'; 
 
 body {
-  background-color: white;
+  background-color: $white;
   margin: 0; 
 }

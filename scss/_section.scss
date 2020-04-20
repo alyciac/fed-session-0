@@ -1,17 +1,14 @@
-$font-color: #393939; 
-$font-family: 'Source Sans Pro', sans-serif;
-
 .section{
   color: $font-color; 
   font-family: $font-family; 
 }
 
 .section--first {
-  background-color: #EEE2DC; 
+  background-color: $background-alt; 
 }
 
 .section--second{
-  background-color: white; 
+  background-color: $white; 
 }
 
 .section__constrain{
