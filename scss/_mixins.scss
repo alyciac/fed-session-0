@@ -1,0 +1,16 @@
+
+@mixin linky-link($color, $color-hover){
+    color: $color; 
+    text-decoration: none; 
+    transition: color 0.5s ease-in-out;
+    
+    &:visited {
+        color: $color;
+    }
+
+    &:hover,
+    &:focus, 
+    &:active {
+        color: $color-hover;
+    }
+}

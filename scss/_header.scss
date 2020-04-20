@@ -1,8 +1,22 @@
+@import "mixins"; 
+
+$black: #151515; 
+$red: #AC3B61;
+$blue: #123C69;
+
 .section-header{
-    border-top: 1px solid #151515; 
+    border-top: 1px solid $black; 
 }
 
 .section-header__constrain{
     display: flex; 
     justify-content: space-between;
+}
+
+.section-header__link{
+    @include linky-link($red, $blue); 
+}
+
+.section-header__intro{
+    font-style: italic;
 }

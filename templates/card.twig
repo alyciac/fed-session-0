@@ -1,10 +1,10 @@
 <article class="card {{mod}}">
     {% if card_category %}
         <div class="category__wrapper">
-            <div class="category__name">
-                <span class="category category-{{card_category}}">{{card_category}}</span><hr> 
+            <div class="category__section">
+                <a href="#category" class="category category-{{card_category}}">{{card_category}}</a><hr class="category__line"> 
             </div>
-            <hr>
+            <hr class="category__divider">
         </div>
     {% endif %}
     {% if card_image %}
@@ -16,7 +16,7 @@
             <span class="material-icons">{{card_icon}}</span>
         {% endif %}
         </h2>
-    <p class="card__author">By {{ card_authors | join(', ')}}</p>
+        <p class="card__author">by {{ card_authors | join(', ')}}</p>
     </header>
     <div class="card__content">
         {{card_content}}

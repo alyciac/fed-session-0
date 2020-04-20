@@ -1,3 +1,9 @@
+@import "mixins"; 
+
+$font-color: #393939; 
+$blue: #123C69; 
+$red: #AC3B61; 
+
 .card{
     flex-basis: 23%; 
 }
@@ -11,13 +17,51 @@
 }
 
 .category{
+    display: inline-flex; 
     text-transform: uppercase; 
+    padding-right: 12%; 
 }
 
 .category-unicorns{
-    color: #123C69; 
+    @include linky-link($blue, $red); 
 }
 
 .category-bears{
-    color: #AC3B61; 
+    @include linky-link($red, $blue); 
 }
+
+.category__name{
+    display: flex; 
+}
+
+.category__line{
+    display: inline-flex; 
+    width: 67%; 
+    margin-left: 0.3125rem; 
+
+}
+.category__divider{
+    margin-left: 0; 
+    width: 88%; 
+}
+
+.card__title{
+    font-weight: bold;
+    font-size: 1.375em;
+    line-height: 1.091em;
+
+    .card--big &{
+        font-size: 2.250em; 
+        line-height: 0.944em;
+    }
+
+    .material-icons{
+        font-size: 0.727em;
+    }
+}
+
+.card__author{
+    font-size: 0.750em; 
+    font-weight: bold;
+}
+
