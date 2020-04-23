@@ -1,0 +1,9 @@
+.section__footer{
+    display: block; 
+    text-align: center; 
+    padding-bottom: 20px; 
+    
+    .button{
+        @include button-linky; 
+    }
+}

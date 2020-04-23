@@ -11,11 +11,10 @@
   background-color: $white; 
 }
 
-.section__constrain{
-  padding-bottom: 50px; 
-  padding-top: 25px; 
+.section__constrain{ 
+  padding: 25px 10px 0px; 
   margin: auto; 
-  max-width: 1010px; 
+  max-width: $container-size; 
 }
 
 .section-header{
@@ -27,4 +26,8 @@
   line-height: 1.250em;
   margin-top: 3px; 
   margin-bottom: 20px; 
+}
+
+.section-header__intro{
+  padding-bottom: 40px; 
 }

@@ -1,44 +1,77 @@
-$font-color: #393939; 
-$blue: #123C69; 
-$red: #AC3B61; 
 
 .card{
     flex-basis: 23%; 
+    padding-bottom: 20px; 
+
+    @include breakpoint($sm){
+        flex-basis: 48%; 
+    }
+
+    @include breakpoint($xs){
+        flex-basis: 100%;  
+    }
 }
 
 .card--big{
     flex-basis: 48%; 
+
+    @include breakpoint($sm){
+        flex-basis: 100%; 
+    }
 }
 
 .card__image{
+    margin-top: 17px; 
     width: 100%; 
 }
 
 .category{
     display: inline-flex; 
     text-transform: uppercase; 
-    padding-right: 12%; 
 }
 
 .category-unicorns{
-    @include linky-link(); 
+    color: $red; 
+
+    .category__name{
+        @include linky-link($red, $blue); 
+    }
 }
 
 .category-bears{
-    @include linky-link($red, $blue); 
+    color: $blue; 
+
+    .category__name{
+        @include linky-link($blue, $red); 
+    }
 }
 
 .category__name{
     display: flex; 
+    text-transform: uppercase; 
+}
+
+.category__section{
+    display: flex; 
+    justify-content: space-between;
+}
+
+%line {
+    border-bottom-width: 1px; 
+    border-bottom-style: solid; 
+    border-bottom-color: inherit; 
 }
 
 .category__line{
-    display: inline-flex; 
-    width: 67%; 
+    @extend %line; 
+    flex-grow: 1; 
+    margin-top: 0.75em; 
+    margin-bottom: 0.25em; 
     margin-left: 0.3125rem; 
-
 }
+
 .category__divider{
+    @extend %line; 
     margin-left: 0; 
     width: 88%; 
 }

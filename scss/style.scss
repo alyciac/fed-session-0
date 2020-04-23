@@ -1,8 +1,9 @@
-@import 'mixins'; 
-@import "section";
+@import 'global'; 
+@import 'section';
+@import 'header'; 
 @import 'grid'; 
 @import 'card'; 
-@import 'header'; 
+@import 'footer'; 
 
 body {
   background-color: $white;
