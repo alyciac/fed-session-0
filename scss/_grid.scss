@@ -4,4 +4,8 @@
     flex-direction: row; 
     justify-content: space-between;
     padding-bottom: 42px; 
+
+    @include breakpoint($sm){
+        padding-bottom: 0px; 
+    }
 }
