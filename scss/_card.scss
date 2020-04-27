@@ -84,6 +84,12 @@
     font-weight: bold;
     font-size: 1.375em;
     line-height: 1.091em;
+    min-height: 2.2em; 
+
+
+    @include breakpoint($sm){
+        min-height: auto;
+    }
 
     .section--first &{
         font-family: $font-family-two;
@@ -95,6 +101,7 @@
         font-weight: bold;
         font-size: 2.250em; 
         line-height: 0.944em;
+        min-height: auto;
     }
 
     .material-icons{
@@ -105,4 +112,13 @@
 .card__author{
     font-size: 0.750em; 
     font-weight: bold;
+    min-height: 2.5em;
+
+    .card--big &{
+        min-height: auto;
+    }
+
+    @include breakpoint($sm){
+        min-height: auto;
+    }
 }

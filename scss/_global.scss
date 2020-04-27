@@ -15,6 +15,9 @@ $container-size: 1030px;
     color: $color; 
     display: inline-block; 
     text-decoration: none; 
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out; 
     transition: color 0.5s ease-in-out;
     
     &:visited {
@@ -31,6 +34,8 @@ $container-size: 1030px;
 @mixin button-linky($color: $white, $background: $blue, $background-hover: $red){
     color: $color; 
     background-color: $background; 
+    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     border-radius: 8px; 
     display: inline-block; 
@@ -39,6 +44,9 @@ $container-size: 1030px;
     font-weight: bold; 
     text-transform: uppercase; 
     text-decoration: none; 
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out; 
     transition: all 0.5s ease-in-out;
     
     &:visited {
@@ -49,6 +57,8 @@ $container-size: 1030px;
     &:focus, 
     &:active {
         background: $background-hover;
+        -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, .8);
+        -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, .8);
         box-shadow: 0 2px 10px rgba(0, 0, 0, .8);
     }
 }
