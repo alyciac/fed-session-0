@@ -2,8 +2,9 @@
 @import 'section';
 @import 'header'; 
 @import 'grid'; 
-@import 'card'; 
-@import 'footer'; 
+@import 'category'; 
+@import 'card';
+@import 'button'; 
 
 body {
   background-color: $white;
